@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/wood.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,22 +52,22 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
+                <a>Anonymous Authors</a></span>
+                <!-- <span class="author-block">
                   <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                  </span> -->
                   </div>
 
-                  <div class="is-size-5 publication-authors">
+                  <!-- <div class="is-size-5 publication-authors">
                     <span class="author-block">Institution Name<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                  </div> -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -82,20 +82,10 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com" target="_blank"
+                    <a target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,12 +96,12 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="static/videos/banner_video.mp4" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Video</span>
                 </a>
               </span>
             </div>
@@ -124,11 +114,11 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
+        Your video here
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
@@ -137,8 +127,27 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
+
+<!-- Teaser Image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- using <img> to replace <video> -->
+      <img 
+        src="static/images/teaser.jpg" 
+        alt="Teaser image for the project" 
+        class="image is-fullwidth" 
+        style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      
+      <h2 class="subtitle is-size-4 has-text-centered">
+      <strong>ETac: a lightweight and efficient tactile simulation framework. </strong> (a) ETac estimates elastomer surface deformations with FEM-level fidelity. (b) It enables large-area tactile sensing for dexterous manipulators while supporting large-scale RL training.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +157,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Tactile sensors are increasingly integrated into dexterous robotic manipulators to enhance contact perception. 
+          However, learning manipulation policies that rely on tactile sensing remains challenging, primarily due to the trade-off between fidelity and computational cost of soft-body simulations. 
+          To address this, we present ETac, a tactile simulation framework that models elastomeric soft-body interactions with both high fidelity and efficiency.
+          ETac distills knowledge from high-fidelity yet computationally expensive finite element simulations to a lightweight deformation propagation model, achieving simulation quality while enabling large-scale policy training. 
+          When serving as a soft-body simulation backend, ETac produces surface deformation estimates comparable to FEM and demonstrates applicability for creating digital twin of tactile sensors.
+          Then, we showcase its capability in training a blind grasping policy that leverages large-area tactile feedback to manipulate diverse objects. 
+          Running on a single RTX 4090 GPU, ETac supports reinforcement learning across 4,096 parallel environments, achieving a total throughput of 869 FPS. 
+          The resulting policy reaches an average success rate of 84.45\% across four object types, underscoring ETac's potential to make tactile-based skill learning both efficient and scalable.
           </p>
         </div>
       </div>
@@ -156,6 +172,51 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<section class="section">
+  <div class="container">
+    
+    <div class="item" >
+      <h2 class="title is-size-2 has-text-centered">
+        <strong>ETac + Dexterous Manipulators: Large-area Tactile Sensing</strong>  
+      </h2>
+      <figure class="image has-image-centered">
+        <img 
+          src="static/gifs/exp22.gif" 
+        >
+      </figure>
+      <p class="content is-size-4 has-text-centered">
+        Leveraging the lightweight deformation propagation model, ETac enables real-time tactile feedback simulation, delivering spatially extensive and densely distributed responses for dexterous manipulators.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    
+    <div class="item" >
+      <h2 class="title is-size-2 has-text-centered">
+        <strong>RL Validation: Blind Grasp</strong>  
+      </h2>
+      <figure class="image has-image-centered">
+        <img 
+          src="static/gifs/scale.gif" 
+        >
+      </figure>
+      <figure class="image has-image-centered">
+        <img 
+          src="static/images/process.jpg" 
+        >
+      </figure>
+      <p class="content is-size-4 has-text-centered">
+        Qualitative results of blind grasping policy. The hand continuously adjusted its pose based on tactile feedback, gradually enclosed and ultimately lifted the object.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
 <!-- Image carousel -->
@@ -201,49 +262,49 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
+      Paper video.
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
+            Youtube embed code here
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+            Your video file here
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
+            Your video file here
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
+            Your video file here
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -251,7 +312,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -260,7 +321,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,17 +331,17 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
