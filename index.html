@@ -141,7 +141,7 @@
         class="image is-fullwidth" 
         style="width: 100%; height: auto; display: block; margin: 0 auto;">
       
-      <h2 class="subtitle is-size-4 has-text-centered">
+      <h2 class="content is-size-4 has-text-centered">
       <strong>ETac: a lightweight and efficient tactile simulation framework. </strong> (a) ETac estimates elastomer surface deformations with FEM-level fidelity. (b) It enables large-area tactile sensing for dexterous manipulators while supporting large-scale RL training.
       </h2>
     </div>
@@ -177,10 +177,11 @@
   <div class="container">
     
     <div class="item" >
-      <h2 class="title is-size-2 has-text-centered">
+      <h2 class="title is-size-2">
         <strong>High Fidelity Deformation Estimation</strong>  
-      </h2>
-      <h2 class="title is-size-3 ">
+      </h2> 
+      <br>
+      <h2 class="subtitle is-size-3 ">
         <strong>Flat Elastomer</strong>  
       </h2>
       <figure class="image has-image-centered">
@@ -188,8 +189,8 @@
           src="static/gifs/exp1-1.gif" 
         >
       </figure>
-
-      <h2 class="title is-size-3 ">
+      <br>
+      <h2 class="subtitle is-size-3 ">
         <strong>Curved Elastomer</strong>  
       </h2>
       <figure class="image has-image-centered">
@@ -209,17 +210,17 @@
   <div class="container">
     
     <div class="item" >
-      <h2 class="title is-size-2 has-text-centered">
+      <h2 class="title is-size-2">
         <strong>ETac + Dexterous Manipulators: Large-area Tactile Sensing</strong>  
-      </h2>
+      </h2> <br>
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/exp22.gif" 
         >
       </figure>
-      <p class="content is-size-4 has-text-centered">
-        Leveraging the lightweight deformation propagation model, ETac enables real-time tactile feedback simulation, delivering spatially extensive and densely distributed responses for dexterous manipulators.
-      </p>
+      <!-- <p class="content is-size-4 has-text-centered">
+        ETac enables real-time tactile feedback simulation, delivering spatially extensive and densely distributed responses for dexterous manipulators.
+      </p> -->
     </div>
 
   </div>
@@ -229,19 +230,19 @@
   <div class="container">
     
     <div class="item" >
-      <h2 class="title is-size-2 has-text-centered">
+      <h2 class="title is-size-2">
         <strong>Simulating Real Sensors</strong>  
       </h2>
-
+      <br>
       <figure class="image has-image-centered">
         <img 
           src="static/images/toreal.jpg" 
         >
       </figure>
-      <p class="content is-size-4 has-text-centered">
+      <!-- <p class="content is-size-4 has-text-centered">
         We validated ETac's ability to simulate tactile sensors by equipping them in real and simulated settings, recording real sensor readings and surface deformations from ETac and FEM. 
         A PointNet model was trained to map displacement fields to sensor responses.
-      </p>
+      </p> -->
 
       <h2 class="title is-size-3 ">
         <strong>Flat Sensors</strong>  
@@ -272,9 +273,10 @@
   <div class="container">
     
     <div class="item" >
-      <h2 class="title is-size-2 has-text-centered">
+      <h2 class="title is-size-2">
         <strong>RL Validation: Blind Grasp</strong>  
       </h2>
+      <br>
       <figure class="image has-image-centered">
         <img 
           src="static/gifs/scale.gif" 
@@ -307,7 +309,7 @@
           </figure>
         <!-- <img src="static/images/performance.jpg" alt="MY ALT TEXT"/> -->
         <h2 class="subtitle is-size-4 has-text-centered">
-          RL training performances. When simulating 1000 sensing nodes on the front side of the hand, 
+          <strong>RL training performances.</strong> When simulating 1000 sensing nodes on the front side of the hand, 
           ETac achieves a total throughput of 869 FPS across 4,096 parallel environments (on a single RTX 4090 GPU). 
         </h2>
       </div>
@@ -319,7 +321,7 @@
             >
           </figure>
         <h2 class="subtitle is-size-4 has-text-centered">
-          Qualitative results of blind grasping policy. The hand continuously adjusted its pose based on tactile feedback, gradually enclosed and ultimately lifted the object.
+          <strong>Qualitative results of blind grasping policy.</strong> The hand continuously adjusted its pose based on tactile feedback, gradually enclosed and ultimately lifted the object.
         </h2>
       </div>
   </div>
